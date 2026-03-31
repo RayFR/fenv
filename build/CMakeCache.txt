@@ -160,7 +160,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MyApp
+CMAKE_PROJECT_NAME:STATIC=fenv
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -262,6 +262,15 @@ SFML_DIR:PATH=C:/msys64/mingw64/lib/cmake/SFML
 
 //Path to a file.
 SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
+//Value Computed by CMake
+fenv_BINARY_DIR:STATIC=C:/Users/fredd/Development/fenv/build
+
+//Value Computed by CMake
+fenv_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+fenv_SOURCE_DIR:STATIC=C:/Users/fredd/Development/fenv
 
 
 ########################
