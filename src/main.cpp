@@ -23,7 +23,7 @@ int main()
     if (!map.load("../assets/sprites/tileset.png", sf::Vector2u(32, 32), level, 16, 8))
         return 1;
 
-    Organism organism({100.f, 100.f});
+    Organism organism({100.f, 100.f}, 0);
 
     sf::Clock clock;
 

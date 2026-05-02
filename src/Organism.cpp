@@ -1,9 +1,10 @@
 #include "Organism.h"
 
-Organism::Organism(sf::Vector2f startPosition) // constructor
+Organism::Organism(sf::Vector2f startPosition, int startTrophicLevel) // constructor
 {
     position = startPosition;
     health = 100.f;
+    trophicLevel = startTrophicLevel;
     alive = true;
     hunger = 0.f;
     thirst = 0.f;

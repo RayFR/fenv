@@ -5,7 +5,7 @@
 
 class Organism {
     public:
-        Organism(sf::Vector2f startPos);
+        Organism(sf::Vector2f startPos, int startTrophicLevel);
 
         virtual ~Organism() = default; // destructor runs when object is destroyed
 
@@ -15,6 +15,7 @@ class Organism {
         sf::Vector2f position;
         float health;
         bool alive;
+        int trophicLevel;
 
         float hunger; 
         float thirst;
