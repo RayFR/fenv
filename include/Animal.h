@@ -5,15 +5,25 @@
 
 class Animal : public Organism {
     public:
-        Animal(sf::Vector2f startPos, int startTrophicLevel);
+        enum class Diet
+        {
+            Carnivore, Herbivore, Omnivore
+        };
+
+        Animal(sf::Vector2f startPos, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType);
 
         void update(float dt) override; // overrides the parent procedure
+        
+        void move(float dt);
+        void search();
+        void flee();
+        void attack(float dt);
+        Animal reproduce();
 
     protected:
-        float speed;
-        float vision;
+        int speed;
+        int vision;
         float attackDmg;
         bool lookingForMate; 
-
-    
+        Diet diet;
 };
