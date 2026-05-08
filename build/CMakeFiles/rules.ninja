@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -SC:\Users\fredd\Development\fenv -BC:\Users\fredd\Development\fenv\build
+  command = C:\msys64\mingw64\bin\cmake.exe --regenerate-during-build -SC:\Users\fcrum\DScode\C++\fenv -BC:\Users\fcrum\DScode\C++\fenv\build
   description = Re-running CMake...
   generator = 1
 
