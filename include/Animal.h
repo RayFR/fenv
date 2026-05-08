@@ -2,6 +2,7 @@
 
 #include "Organism.h"
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 
 class Animal : public Organism {
     public:
@@ -10,7 +11,7 @@ class Animal : public Organism {
             Carnivore, Herbivore, Omnivore
         };
 
-        Animal(sf::Vector2f startPos, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType);
+        Animal(sf::Vector2f startPos, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType, sf::Texture fileTexture);
 
         void update(float dt) override; // overrides the parent procedure
         
@@ -26,4 +27,5 @@ class Animal : public Organism {
         float attackDmg;
         bool lookingForMate; 
         Diet diet;
+        sf::Texture texture;
 };

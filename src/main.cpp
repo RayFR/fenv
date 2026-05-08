@@ -2,6 +2,7 @@
 #include <vector>
 #include "TileMap.h"
 #include "Organism.h"
+#include "Animal.h"
 
 int main()
 {
@@ -23,7 +24,7 @@ int main()
     if (!map.load("../assets/sprites/tileset.png", sf::Vector2u(32, 32), level, 16, 8))
         return 1;
 
-    Organism organism({100.f, 100.f}, 0);
+    Animal chicken({100.f, 100.f}, 0);
 
     sf::Clock clock;
 
@@ -37,7 +38,7 @@ int main()
                 window.close();
         }
         
-        organism.update(dt);
+        chicken.update(dt);
 
         window.clear();
         window.draw(map);

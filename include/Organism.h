@@ -1,6 +1,8 @@
 #pragma once // prevents multiple includes
 
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Texture.hpp>
 
 
 class Organism {
@@ -16,8 +18,7 @@ class Organism {
         float health;
         bool alive;
         int trophicLevel;
-
         float hunger; 
         float thirst;
-
+        
 };
