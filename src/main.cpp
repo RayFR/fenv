@@ -25,7 +25,7 @@ int main()
         return 1;
 
     sf::Texture chickenTexture;
-    chickenTexture.loadFromFile("../assets/chicken.PNG");
+    chickenTexture.loadFromFile("../assets/sprites/chicken.PNG");
 
     Animal chicken({100.f, 100.f}, 1, 2, 2.f, Animal::Diet::Herbivore, chickenTexture);
 

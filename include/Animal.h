@@ -19,7 +19,7 @@ class Animal : public Organism {
         void search();
         void flee();
         void attack(float dt);
-        Animal reproduce();
+        // Animal reproduce();
         const sf::Sprite& getSprite() const;
 
     protected:
@@ -29,4 +29,5 @@ class Animal : public Organism {
         bool lookingForMate; 
         Diet diet;
         sf::Texture texture;
+        sf::Sprite sprite;
 };
