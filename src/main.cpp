@@ -24,7 +24,10 @@ int main()
     if (!map.load("../assets/sprites/tileset.png", sf::Vector2u(32, 32), level, 16, 8))
         return 1;
 
-    Animal chicken({100.f, 100.f}, 0);
+    sf::Texture chickenTexture;
+    chickenTexture.loadFromFile("../assets/chicken.PNG");
+
+    Animal chicken({100.f, 100.f}, 1, 2, 2.f, Animal::Diet::Herbivore, chickenTexture);
 
     sf::Clock clock;
 
@@ -42,6 +45,7 @@ int main()
 
         window.clear();
         window.draw(map);
+        window.draw(chicken.getSprite());
         window.display();
     }
 

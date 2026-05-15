@@ -7,7 +7,9 @@ include_directories(include)
 
 add_executable(app
     src/main.cpp
-    src/Tilemap.cpp
+    src/TileMap.cpp
+    src/Organism.cpp
+    src/Animal.cpp
 )
 
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)

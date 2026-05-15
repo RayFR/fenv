@@ -20,6 +20,7 @@ class Animal : public Organism {
         void flee();
         void attack(float dt);
         Animal reproduce();
+        const sf::Sprite& getSprite() const;
 
     protected:
         int speed;
