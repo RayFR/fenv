@@ -14,6 +14,8 @@ public: // other files have access to these
               unsigned int width,
               unsigned int height);
 
+    bool isWalkable(int tileX, int tileY, int width);
+
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
