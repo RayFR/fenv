@@ -78,15 +78,6 @@ bool TileMap::load(const std::string& tilesetPath,
     return true;
 }
 
-bool TileMap::isWalkable(int tileX, int tileY, int width) 
-{
-    bool walkable;
-    int tile = (tileY * width)+tileX; 
-    if(tile == 75) {walkable = false;}
-    else {walkable;}
-    return walkable;
-}
-
 void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     // apply both transform and textures now to the tilemap - then draw everything to screen with the vertices and states 

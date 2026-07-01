@@ -3,25 +3,19 @@
 #include "TileMap.h"
 #include "Organism.h"
 #include "Animal.h"
+#include "WorldMap.h"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode({512, 256}), "Ecosystem");
+    int levelWidth = 16;
+    int levelHeight = 8; 
+    int tileSize = 32;
     
-    const std::vector<int> level =
-    {
-        0, 0, 0, 0, 75, 75, 75, 75, 75, 75, 75, 75, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 75, 75, 75, 75, 75, 75, 75, 75, 0, 0, 0,
-        0, 0, 0, 0, 0, 75, 75, 75, 75, 75, 75, 75, 75, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 75, 75, 75, 75, 75, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    };
-
-    TileMap map;
-    if (!map.load("../assets/sprites/tileset.png", sf::Vector2u(32, 32), level, 16, 8))
+    TileMap tileMap;
+    WorldMap level(levelWidth, levelHeight, tileSize);
+    
+    if (!tileMap.load("../assets/sprites/tileset.png", sf::Vector2u(tileSize, tileSize), level.getLevel(), levelWidth, levelHeight))
         return 1;
 
     sf::Texture chickenTexture;
@@ -44,7 +38,7 @@ int main()
         chicken.update(dt);
 
         window.clear();
-        window.draw(map);
+        window.draw(tileMap);
         window.draw(chicken.getSprite());
         window.display();
     }

@@ -26,11 +26,10 @@ void Animal::move(float dt)
     sprite.setPosition(position);
 }
 
-void Animal::search(int tileSize)
+void Animal::search()
 {
-    int tileX = position.x / tileSize;
-    int tileY = position.y / tileSize;
-    TileMap::isWalkable(tileX, tileY, 16);
+    //int tileX = position.x / tileSize;
+    //int tileY = position.y / tileSize;
 
     
 }
