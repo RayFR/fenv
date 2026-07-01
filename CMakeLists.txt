@@ -10,6 +10,7 @@ add_executable(app
     src/TileMap.cpp
     src/Organism.cpp
     src/Animal.cpp
+    src/WorldMap.cpp
 )
 
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
