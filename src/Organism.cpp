@@ -24,3 +24,17 @@ void Organism::update(float dt) {
         alive = false; 
     }
 }
+
+sf::Vector2i Organism::getTilePosition(int tileSize) const {
+    return {
+        static_cast<int>(position.x) / tileSize,
+        static_cast<int>(position.y) / tileSize
+    };  
+}
+
+float Organism::distanceTo(const Organism& other) const {
+    float dx = position.x - other.position.x;
+    float dy = position.y - other.position.y;
+
+    return std::sqrt(dx * dx + dy * dy);
+}

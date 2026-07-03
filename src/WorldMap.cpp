@@ -28,7 +28,7 @@ const std::vector<int>& WorldMap::getLevel() const // eventually want to randoml
     return level;
 }
 
-bool WorldMap::isWalkable(int tileX, int tileY) 
+bool WorldMap::isWalkable(int tileX, int tileY) const
 {
     if (tileX < 0 || tileY < 0 || tileX >= width || tileY >= height)
         return false;
@@ -40,5 +40,8 @@ bool WorldMap::isWalkable(int tileX, int tileY)
 
 int WorldMap::getTile(int tileX, int tileY)
 {
+    if (tileX < 0 || tileY < 0 || tileX >= width || tileY >= height)
+        return -1;
+
     return level[(tileY * width)+tileX];
 }

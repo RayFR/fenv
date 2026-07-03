@@ -1,6 +1,6 @@
 #include "Animal.h"
 
-Animal::Animal(sf::Vector2f startPosition, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType, sf::Texture fileTexture)
+Animal::Animal(sf::Vector2f startPosition, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType, sf::Texture& fileTexture)
     : Organism(startPosition, startTrophicLevel),
     speed(startSpeed),
     diet(dietType),
@@ -34,7 +34,7 @@ void Animal::search()
     
 }
 
-void Animal::flee()
+void Animal::fleeFrom()
 {
 
 }
@@ -44,11 +44,10 @@ void Animal::attack(float dt)
 
 }
 
-/* Animal Animal::reproduce()
+void Animal::wander()
 {
-
+    
 }
- */
 
 const sf::Sprite& Animal::getSprite() const{
     return sprite;

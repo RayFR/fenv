@@ -11,7 +11,7 @@ class WorldMap {
         int tileSize;
         const std::vector<int> level;
         
-        bool isWalkable(int tileX, int tileY);
+        bool isWalkable(int tileX, int tileY) const;
         int getTile(int tileX, int tileY);  
         std::vector<int> generateLevel();
         const std::vector<int>& getLevel() const;

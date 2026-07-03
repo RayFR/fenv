@@ -3,6 +3,8 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include <cmath>
+#include "WorldMap.h"
 
 
 class Organism {
@@ -11,7 +13,10 @@ class Organism {
 
         virtual ~Organism() = default; // destructor runs when object is destroyed
 
-        virtual void update(float dt);
+        virtual void update(float dt, const WorldMap& world);
+
+        sf::Vector2i getTilePosition(int tileSize) const;
+        float distanceTo(const Organism& other) const;
 
     protected: // only children can modify
         sf::Vector2f position;
