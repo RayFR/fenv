@@ -3,6 +3,8 @@
 #include "TileMap.h"
 #include "Organism.h"
 #include "Animal.h"
+#include "Chicken.h"
+#include "Fox.h"
 #include "WorldMap.h"
 
 int main()
@@ -19,13 +21,16 @@ int main()
         return 1;
 
     sf::Texture chickenTexture;
+    sf::Texture foxTexture;
+    foxTexture.loadFromFile("../assets/sprites/fox.PNG");
     if (!chickenTexture.loadFromFile("../assets/sprites/chicken.PNG")) {
         return 1;
     } else {
         chickenTexture.loadFromFile("../assets/sprites/chicken.PNG");
     };
 
-    Animal chicken({100.f, 100.f}, 1, 2, 2.f, Animal::Diet::Herbivore, chickenTexture);
+    Chicken chicken({100.f, 100.f}, 1, 2, 2.f, Animal::Diet::Herbivore, chickenTexture);
+    Fox fox();
 
     sf::Clock clock;
 
@@ -39,7 +44,7 @@ int main()
                 window.close();
         }
         
-        chicken.update(dt);
+        chicken.update(dt, level, fox);
 
         window.clear();
         window.draw(tileMap);

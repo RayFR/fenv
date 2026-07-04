@@ -14,9 +14,9 @@ Animal::Animal(sf::Vector2f startPosition, int startTrophicLevel, int startSpeed
     sprite.setScale({0.5f, 0.5f});
 };
 
-void Animal::update(float dt)
+void Animal::update(float dt, const WorldMap& world)
 {
-    Organism::update(dt);
+    Organism::update(dt, world);
     move(dt);
 }
 

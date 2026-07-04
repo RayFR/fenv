@@ -15,7 +15,7 @@ class Organism {
 
         virtual void update(float dt, const WorldMap& world);
 
-        sf::Vector2i getTilePosition(int tileSize) const;
+        sf::Vector2i getPosition(int tileSize) const;
         float distanceTo(const Organism& other) const;
 
     protected: // only children can modify

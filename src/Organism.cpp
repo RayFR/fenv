@@ -11,7 +11,7 @@ Organism::Organism(sf::Vector2f startPosition, int startTrophicLevel) // constru
 }
 
 // dt = delta time -> how much time has passed since the last frame/update 
-void Organism::update(float dt) {
+void Organism::update(float dt, const WorldMap& world) {
     hunger += 5.f * dt;
     thirst += 8.f * dt;
 
@@ -25,7 +25,7 @@ void Organism::update(float dt) {
     }
 }
 
-sf::Vector2i Organism::getTilePosition(int tileSize) const {
+sf::Vector2i Organism::getPosition(int tileSize) const {
     return {
         static_cast<int>(position.x) / tileSize,
         static_cast<int>(position.y) / tileSize

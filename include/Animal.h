@@ -23,7 +23,7 @@ class Animal : public Organism {
 
         Animal(sf::Vector2f startPos, int startTrophicLevel, int startSpeed, float startAttackDmg, Diet dietType, sf::Texture& fileTexture);
 
-        void update(float dt) override; // overrides the parent procedure
+        void update(float dt, const WorldMap& world) override; // overrides the parent procedure
         
         void move(float dt);
         void wander();
